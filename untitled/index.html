@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>EPIC GAME - ROLL THE DICE</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
 
@@ -25,13 +25,24 @@
 <body>
 
   <!-- Add your site or application content here -->
- <p> Play this epic game - Roll the Dice </p>
+  <header>
+    <div class="header-image">
+      <img src="header.roll..png" alt="roll a dice header">
+    </div>
+  </header>
+  <h1 style="color: rebeccapurple;">Press the dice to see who the winner is!</h1>
 
-  <h3 style="color: darkred;">YOU</h3><p id="playerRollText">Player Roll: No result yet</p>
-  <button id = "button0"> Roll the Dice </button>
-  <h3>COMPUTER</h3> <p id="computerRollText">Computer Roll: No result yet</p>
-  <p id="gameResultText">Result: No game played yet</p>
+
+  <div class="button-container"> </div>
+  <div id="leftText">
+    <h3 style="color: rebeccapurple;">YOU</h3>
+       <p id="playerRollText">Player Roll: No result yet</p></div>
+  <button id = "button0"> <img src="dice-icon3.png" alt="Roll the Dice" width="120" height="120"> </button>
+  <div id="rightText"><h3>COMPUTER </h3><p id="computerRollText">Computer Roll: No result yet </p> </div>
+
   <h3>Result</h3>
+  <p id="gameResultText">No game played yet</p>
+
   <p id="playerWinsText">Player Wins: 0</p>
   <p id="computerWinsText">Computer Wins: 0</p>
   <p id="drawsText">Draws: 0</p>

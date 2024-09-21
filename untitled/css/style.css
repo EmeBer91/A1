@@ -16,7 +16,31 @@ html {
   font-size: 1em;
   line-height: 1.4;
 }
+header {
+  text-align: center;
+  padding: 20px 0;
+}
 
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center; /* Centrera all text som standard */
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#leftText {
+  text-align: center; /* Centrera texten och knappen */
+}
+
+button {
+  border: none;
+  background-color: transparent; /* Gör knappen genomskinlig */
+  cursor: pointer;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
