@@ -1,4 +1,4 @@
-// Varibles
+// Variables
 
 let button0 = document.getElementById("button0");
 
@@ -6,10 +6,8 @@ let button0 = document.getElementById("button0");
 let playerRollText = document.getElementById("playerRollText");
 let computerRollText = document.getElementById("computerRollText");
 let gameResultText = document.getElementById("gameResultText");
-let playerWinsText = document.getElementById("playerWinsText");
-let computerWinsText = document.getElementById("computerWinsText");
 let drawsText = document.getElementById("drawsText");
-
+let resultText  = document.getElementById("resultText");
 
 //Data
 let playerRoll = 0;
@@ -25,7 +23,21 @@ showPlayerRollResult ();
 showComputerRollResult ();
 determineWinner();
 updateScoreBoard();
+});
 
+button0.addEventListener('click', function() {
+  // Animate the image to move to the right
+  button0.animate([
+    { transform: 'translateX(0px)' },
+    { transform: 'translateX(25px)' },
+    { transform: 'translateX(-20px)' },
+    { transform: 'translateX(0px)' }
+
+  ], {
+    duration: 500, // Half a second
+    easing: 'ease-in-out',
+    fill: 'forwards' // Ensure the image stays at the final position
+  });
 });
 
 //Controlles
@@ -59,7 +71,6 @@ function determineWinner() {
 }
 // Update Scoreboard
 function updateScoreBoard() {
-  playerWinsText.innerText = "Player Wins: " + playerWins;
-  computerWinsText.innerText = "Computer Wins: " + computerWins;
   drawsText.innerText = "Draws: " + draws;
+  resultText.innerText = "Player Wins " + playerWins + " : " + computerWins + " Computer Wins"
 }

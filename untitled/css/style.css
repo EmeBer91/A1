@@ -269,3 +269,25 @@ textarea {
   }
 }
 
+.container {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertically center all items */
+  justify-content: space-between; /* Distribute space between items */
+  max-width: 1000px; /* Adjust based on your layout needs */
+  margin: 0 auto; /* Center the container on the page */
+}
+
+.left-text, .right-text {
+  flex: 1; /* Allows the text blocks to take up equal space */
+  text-align: center; /* Center the text inside its box */
+}
+
+.center-image {
+  width: 150px; /* Set a specific width for your image */
+  height: auto; /* Keeps the aspect ratio of the image */
+  transition: filter 0.3s ease; /* Smooth transition */
+}
+
+.center-image:hover {
+  filter: sepia(1) hue-rotate(180deg) saturate(200%); /* Apply color change on hover */
+}

@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="theme-color" content="#fafafa">
   <title>EPIC GAME - ROLL THE DICE</title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
@@ -19,11 +19,9 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-
   <!-- Add your site or application content here -->
   <header>
     <div class="header-image">
@@ -32,22 +30,25 @@
   </header>
   <h1 style="color: rebeccapurple;">Press the dice to see who the winner is!</h1>
 
+  <div class="container">
+    <div class="left-text">
+      <h3 style="color: rebeccapurple;">YOU</h3>
+      <p id="playerRollText">Player Roll: No result yet</p>
+    </div>
+    <button id="button0">
+      <img src="dice-icon3.png" alt="Roll the Dice" width="120" height="120" class="center-image">
+    </button>
+    <div class="right-text">
+      <h3> COMPUTER </h3>
+      <p id="computerRollText">Computer Roll: No result yet</p>
+    </div>
+  </div>
 
-  <div class="button-container"> </div>
-  <div id="leftText">
-    <h3 style="color: rebeccapurple;">YOU</h3>
-       <p id="playerRollText">Player Roll: No result yet</p></div>
-  <button id = "button0"> <img src="dice-icon3.png" alt="Roll the Dice" width="120" height="120"> </button>
-  <div id="rightText"><h3>COMPUTER </h3><p id="computerRollText">Computer Roll: No result yet </p> </div>
 
   <h3>Result</h3>
   <p id="gameResultText">No game played yet</p>
-
-  <p id="playerWinsText">Player Wins: 0</p>
-  <p id="computerWinsText">Computer Wins: 0</p>
   <p id="drawsText">Draws: 0</p>
-
+  <h1 id="resultText"></h1>
   <script src="js/app.js"></script>
 </body>
-
 </html>
