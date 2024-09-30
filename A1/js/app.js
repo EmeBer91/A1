@@ -16,6 +16,9 @@ let playerWins = 0;
 let computerWins = 0;
 let draws = 0;
 
+loadGame();
+updateScoreBoard();
+
 //Processes
 button0.addEventListener("click", function() {
 getRandomNumberOneToSixForPlayer();
@@ -23,6 +26,7 @@ showPlayerRollResult ();
 showComputerRollResult ();
 determineWinner();
 updateScoreBoard();
+saveAsCookie();
 });
 
 button0.addEventListener('click', function() {
@@ -74,3 +78,31 @@ function updateScoreBoard() {
   drawsText.innerText = "Draws: " + draws;
   resultText.innerText = "Player Wins " + playerWins + " : " + computerWins + " Computer Wins"
 }
+
+//COOKIE
+function saveAsCookie() {
+  document.cookie = "playerWins=" + playerWins + "; expires=Thu, 18 Dec 2025 12:00:00 UTC";
+  document.cookie = "computerWins=" + computerWins + "; expires=Thu, 18 Dec 2025 12:00:00 UTC";
+  document.cookie = "draws=" + draws + "; expires=Thu, 18 Dec 2025 12:00:00 UTC";
+}
+
+function loadGame() {
+  playerWins = getCookie ("playerWins");
+  computerWins = getCookie ("computerWins");
+  draws = getCookie ("draws");
+
+}
+
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {c = c.substring(1);       }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return 0;}
